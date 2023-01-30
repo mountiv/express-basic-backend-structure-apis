@@ -5,6 +5,24 @@
 To create an account, it is needed to check email and username are already registered or not in database.
 POST request [/api/auth/check/...] will check in front-end when a user input his/her email and username and let him/her know to choose other ones.
 
+### USER SCHEMA
+
+```
+const UserSchema = new Schema(
+  {
+    email: { type: String, required: true, unique: true },
+    username: { type: String, required: true, unique: true },
+    socialMediaHandles: {
+      type: Map,
+      of: String,
+    },
+    securityQueries: { type: Map, of: String },
+    password: { type: String, required: true },
+  },
+  { timestamps: true }
+);
+```
+
 ### CHECK EMAIL: post request [/api/auth/check/email]
 
 - request parameters as json
