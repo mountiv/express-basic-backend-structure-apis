@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "659e5479-e8dc-4b2c-865e-35d4bb455e7b",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24640615"
+	},
+	"item": [
+		{
+			"name": "update a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZjE4NjZjNjc1N2Y2MjlkZDNmODQ2MyIsImlhdCI6MTY3Njc3Mjk3NywiZXhwIjoxNjc2ODU5Mzc3fQ.Ol8xkDEwfNivlFfCraBItmeiGwMjJAqYyA0jXmHOIys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"hello\",\r\n    \"lastname\":\"world\",\r\n    \"title\":\"writer\",\r\n    \"summary\":\"I am a professional writer in Medium, Facebook and LinkedIn.\",\r\n    \"street\":\"here_street\",\r\n    \"city\":\"here_city\",\r\n    \"state\":\"here_state\",\r\n    \"country\":\"here_country\",\r\n    \"mobile\":\"123 546 897\",\r\n    \"telephone\":\"4654634331\",\r\n    \"zipcode\":\"46-546\",\r\n    \"interest\":[\"writing\",\"movie\",\"spotify\",\"trip\"],\r\n    \"social\":{\r\n        \"git\":\"@adf.testuser\",\r\n        \"medium\":\"@adf.testuser\"\r\n        },\r\n    \"securityQueries\":{\r\n        \"Where ware you born?\":\"Earth\",\r\n        \"What is your favorite pet name?\":\"Zemma\"\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZjE4NjZjNjc1N2Y2MjlkZDNmODQ2MyIsImlhdCI6MTY3Njc3Mjk3NywiZXhwIjoxNjc2ODU5Mzc3fQ.Ol8xkDEwfNivlFfCraBItmeiGwMjJAqYyA0jXmHOIys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"testuser1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZThlNWZmYWM1NGIxZGIzNjQyNzAzMCIsImlhdCI6MTY3NjIxNTI2MywiZXhwIjoxNjc2MzAxNjYzfQ.6yn3j4k_uP9X7JLaOq_glLs4_L1S-bLNQiHrSgP_VX4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"password\":\"12343\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/profile/password-reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"profile",
+						"password-reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "block user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZjE4NjZjNjc1N2Y2MjlkZDNmODQ2MyIsImlhdCI6MTY3Njc3Mjk3NywiZXhwIjoxNjc2ODU5Mzc3fQ.Ol8xkDEwfNivlFfCraBItmeiGwMjJAqYyA0jXmHOIys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"testuser\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/profile/block",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"profile",
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyQGV4YW1wbGUuY29tIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsIl9pZCI6IjYzZjE4NjZjNjc1N2Y2MjlkZDNmODQ2MyIsImlhdCI6MTY3Njc3Mjk3NywiZXhwIjoxNjc2ODU5Mzc3fQ.Ol8xkDEwfNivlFfCraBItmeiGwMjJAqYyA0jXmHOIys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"testuser\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/profile/allow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"profile",
+						"allow"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
