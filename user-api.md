@@ -16,3 +16,8 @@ Request will include token retrieved via login as Bear Token.
 - POST [/api/user/profile/allow] : ACTIVATE USER ACCOUNT
 
 - DELETE [/api/user/profile] : DELETE USER ACCOUNT
+
+
+## Author
+
+© me
