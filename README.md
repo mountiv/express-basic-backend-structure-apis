@@ -14,9 +14,9 @@
 
 ## POST APIs [/api/post]
 
-- user-api.md
+- post-api.md
 
-- user.postman_collection.json
+- post.postman_collection.json
 
 
 ## Author
