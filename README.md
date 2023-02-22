@@ -1,4 +1,4 @@
-# API DOCUMENTATION for express-basic-backend-structure
+# APIs of project (express-basic-backend-structure)
 
 ## AUTH APIs [/api/auth]
 
